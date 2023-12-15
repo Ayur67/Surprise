@@ -1,9 +1,10 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
 class View {
   startView() {
-    console.log('Добро пожаловать на викторину');
+    console.log("Добро пожаловать на викторину!!!");
   }
+
   questionsView(obj) {
     inquirer
       .prompt([
