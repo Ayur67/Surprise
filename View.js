@@ -1,22 +1,22 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
 class View {
   startView() {
-    console.log('Welcome на куиз!');
-  }
 
-  async questionsView(str) {
-    const zxc = await inquirer
+    console.log("Добро пожаловать на викторину!!!");
+  }
+  async questionsView(str, trueAnswer) {
+    const ads = await inquirer
+
       .prompt([
         {
-          type: 'input',
-          name: 'bonuses',
+          type: "input",
+          name: "bonuses",
           message: `${str}`,
         },
       ])
       .then((answers) => {
-        const correctAnswer = `${str}`;
-        if (answers.answer === correctAnswer) {
+        if (answers.bonuses === trueAnswer) {
           // Начислить баллы за правильный ответ
           console.log('Лучший');
         } else {
