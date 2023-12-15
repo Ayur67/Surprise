@@ -2,11 +2,11 @@ const inquirer = require('inquirer');
 
 class View {
   startView() {
-    console.log('Добро пожаловать на викторину!!!');
+    console.log('Welcome на куиз!');
   }
 
   async questionsView(str) {
-    const ads = await inquirer
+    const zxc = await inquirer
       .prompt([
         {
           type: 'input',
@@ -18,17 +18,17 @@ class View {
         const correctAnswer = `${str}`;
         if (answers.answer === correctAnswer) {
           // Начислить баллы за правильный ответ
-          console.log('уррааа');
+          console.log('Лучший');
         } else {
           // Начислить баллы за неправильный ответ
-          console.log('охххх');
+          console.log('Сомнительно');
         }
       });
   }
 
   finishView(score) {
     console.log(
-      `Поздравляю! Вы завершили игру! Ваше количество очков ${score}`
+      `Поздравляю! Путь был сложен, но ты справился!) ${score}`
     );
   }
 }
