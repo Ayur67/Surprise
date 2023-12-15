@@ -28,3 +28,5 @@ class Model {
     return (this.currentQuestion += 1);
   }
 }
+
+module.exports = Model;
