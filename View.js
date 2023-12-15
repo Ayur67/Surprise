@@ -9,17 +9,17 @@ class View {
     inquirer
       .prompt([
         {
-          type: 'rawlist',
-          name: 'bonuses',
-          message: `${obj[i].question}`,
-          choices: [
-            { name: `${obj[i].answers[i].answer1}`, value: `${obj.answers.value1}` },
-            { name: `${obj[i].answers[i].answer2}`, value: `${obj.answers.value2}` },
-            { name: `${obj[i].answers[i].answer3}`, value: `${obj.answers.value3}` },
-          ],
+          name: "faveReptile",
+          message: `${obj.question}`,
         },
       ])
-      .then((answers) => console.log(answers));
+      .then((answers) => {
+        if (answers === obj.answer) {
+          console.info("Answer:", answers.faveReptile);
+        } else {
+          console.info("неверно");
+        }
+      });
   }
 
   finishView(score) {
