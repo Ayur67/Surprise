@@ -37,4 +37,5 @@ class Model {
   }
 }
 
+console.log(answers);
 module.exports = Model;
