@@ -1,31 +1,30 @@
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 
 class View {
   startView() {
-    console.log("Добро пожаловать на викторину!!!");
+    console.log('Добро пожаловать на викторину!!!');
   }
 
-  questionsView(obj) {
-    inquirer
-
-    .prompt([
-      {
-        type: 'input',
-        name: 'bonuses',
-        message: `${obj.questions[i].question}`,
-        choices: [
-          { name: `${obj.questions[i].answer}`, value: 0 },
-        ],
-      },
-    ])
-    .then((answers) => {
-      const correctAnswer = `${obj.questions[i].answer}`;
-      if (answers.answer === correctAnswer) {
-        // Начислить баллы за правильный ответ
-      } else {
-        // Начислить баллы за неправильный ответ
-      }
-    })
+  async questionsView(str) {
+    const ads = await inquirer
+      .prompt([
+        {
+          type: 'input',
+          name: 'bonuses',
+          message: `${str}`,
+        },
+      ])
+      .then((answers) => {
+        const correctAnswer = `${str}`;
+        if (answers.answer === correctAnswer) {
+          // Начислить баллы за правильный ответ
+          console.log('уррааа');
+        } else {
+          // Начислить баллы за неправильный ответ
+          console.log('охххх');
+        }
+      });
+  }
 
   finishView(score) {
     console.log(
