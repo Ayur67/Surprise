@@ -1,9 +1,9 @@
 const fs = require("fs").promises;
+
 class Model {
-  constructor(score = 0, questions) {
-    this.themes = themes;
-    this.score = score;
-    this.currentQuestion = 0;
+  constructor() {
+    this.score = 0;
+    this.currentQuestionIndex = 0;
     this.questions = [
       {
         question: "Какая самая высокая гора в мире?",
@@ -33,7 +33,7 @@ class Model {
   }
 
   nextQuestionModel() {
-    return (this.currentQuestion += 1);
+    return this.questions[this.currentQuestionIndex++];
   }
 }
 
