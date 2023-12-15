@@ -1,8 +1,8 @@
 const fs = require("fs").promises;
 
 class Model {
-  constructor() {
-    this.score = 0;
+  constructor(score = 0) {
+    this.score = score;
     // текущий вопрос
     this.currentQuestionIndex = 0;
     // массив с вопросами
