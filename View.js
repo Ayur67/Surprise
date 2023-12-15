@@ -18,10 +18,10 @@ class View {
         const correctAnswer = `${str}`;
         if (answers.answer === correctAnswer) {
           // Начислить баллы за правильный ответ
-          console.log('уррааа');
+          console.log('Твоя правда');
         } else {
           // Начислить баллы за неправильный ответ
-          console.log('охххх');
+          console.log('Подтянись к реальности');
         }
       });
   }
