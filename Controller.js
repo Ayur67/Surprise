@@ -15,13 +15,20 @@ class Controller {
     while (this.model.currentQuestionIndex < this.model.questions.length) {
       // запускаем переход на следующий вопрос
       const currentQuestion = this.model.nextQuestionModel();
-      // получаем ответ и запускаем следующий вопрос
-      const userAnswer = this.view.questionsView(currentQuestion.question);
+
+      const userAnswer = this.view.questionsView(
+        currentQuestion.question,
+        currentQuestion.answer
+      );
+
       await userAnswer;
+
+      if (userAnswer === currentQuestion.answer) {
+        this.model.scoreModel(plus);
+      }
     }
 
-    const currenScore = this.model.scoreModel();
-    this.view.finishView(currenScore);
+    this.view.finishView(this.model.score);
   }
 }
 
