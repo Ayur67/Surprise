@@ -1,16 +1,16 @@
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 
 class View {
   startView() {
-    console.log("Добро пожаловать на викторину!!!");
+    console.log('Добро пожаловать на викторину!!!');
   }
 
-  questionsView(str) {
-    inquirer
+  async questionsView(str) {
+    const ads = await inquirer
       .prompt([
         {
-          type: "input",
-          name: "bonuses",
+          type: 'input',
+          name: 'bonuses',
           message: `${str}`,
         },
       ])
@@ -18,10 +18,10 @@ class View {
         const correctAnswer = `${str}`;
         if (answers.answer === correctAnswer) {
           // Начислить баллы за правильный ответ
-          console.log("уррааа");
+          console.log('уррааа');
         } else {
           // Начислить баллы за неправильный ответ
-          console.log("охххх");
+          console.log('охххх');
         }
       });
   }
