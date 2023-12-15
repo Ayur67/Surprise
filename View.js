@@ -2,11 +2,12 @@ const inquirer = require("inquirer");
 
 class View {
   startView() {
+
     console.log("Добро пожаловать на викторину!!!");
   }
-
   async questionsView(str, trueAnswer) {
     const ads = await inquirer
+
       .prompt([
         {
           type: "input",
@@ -17,17 +18,17 @@ class View {
       .then((answers) => {
         if (answers.bonuses === trueAnswer) {
           // Начислить баллы за правильный ответ
-          console.log("уррааа");
+          console.log('Лучший');
         } else {
           // Начислить баллы за неправильный ответ
-          console.log("охххх");
+          console.log('Сомнительно');
         }
       });
   }
 
   finishView(score) {
     console.log(
-      `Поздравляю! Вы завершили игру! Ваше количество очков ${score}`
+      `Поздравляю! Путь был сложен, но ты справился!) ${score}`
     );
   }
 }
