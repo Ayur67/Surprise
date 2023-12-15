@@ -7,20 +7,25 @@ class View {
 
   questionsView(obj) {
     inquirer
-      .prompt([
-        {
-          name: "faveReptile",
-          message: `${obj.question}`,
-        },
-      ])
-      .then((answers) => {
-        if (answers === obj.answer) {
-          console.info("Answer:", answers.faveReptile);
-        } else {
-          console.info("неверно");
-        }
-      });
-  }
+
+    .prompt([
+      {
+        type: 'input',
+        name: 'bonuses',
+        message: `${obj.questions[i].question}`,
+        choices: [
+          { name: `${obj.questions[i].answer}`, value: 0 },
+        ],
+      },
+    ])
+    .then((answers) => {
+      const correctAnswer = `${obj.questions[i].answer}`;
+      if (answers.answer === correctAnswer) {
+        // Начислить баллы за правильный ответ
+      } else {
+        // Начислить баллы за неправильный ответ
+      }
+    })
 
   finishView(score) {
     console.log(
