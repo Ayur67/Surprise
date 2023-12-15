@@ -7,25 +7,28 @@ class Model {
     this.questions = [
       {
         question: "Какая самая высокая гора в мире?",
-        answers: 
+        answers: [
           { answer1: "Эверест", value1: 1 },
           { answer2: "Эльбрус", value2: 0 },
           { answer3: "Альпы", value3: 0 },
+        ],
       },
       {
         question: "Кто написал 'Войну и мир'?",
-        answers:
+        answers: [
           { answer1: "Федор Тютчев", value1: 0 },
           { answer2: "Лев Толстой", value2: 1 },
           { answer3: "Александр Пушкин", value3: 0 },
+        ],
       },
       {
         question: "Какой химический элемент имеет символ 'O'?",
-        answers: 
+        answers: [
           { answer1: "Водород", value1: 0 },
           { answer2: "Кислород", value2: 1 },
           { answer3: "Кальций", value3: 0 },
-      }
+        ],
+      },
     ];
   }
 
