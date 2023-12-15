@@ -7,6 +7,7 @@ class View {
 
   questionsView(obj) {
     inquirer
+
     .prompt([
       {
         type: 'input',
