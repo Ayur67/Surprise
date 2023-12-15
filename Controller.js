@@ -24,7 +24,7 @@ class Controller {
       await userAnswer;
 
       if (userAnswer === currentQuestion.answer) {
-        this.model.scoreModel(plus);
+        this.model.scoreModel();
       }
     }
 

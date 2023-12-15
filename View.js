@@ -2,7 +2,6 @@ const inquirer = require("inquirer");
 
 class View {
   startView() {
-
     console.log("Добро пожаловать на викторину!!!");
   }
   async questionsView(str, trueAnswer) {
@@ -16,20 +15,18 @@ class View {
         },
       ])
       .then((answers) => {
-        if (answers.bonuses === trueAnswer) {
+        if (answers.bonuses.toLowerCase() === trueAnswer.toLowerCase()) {
           // Начислить баллы за правильный ответ
-          console.log('Лучший');
+          console.log("Лучший");
         } else {
           // Начислить баллы за неправильный ответ
-          console.log('Сомнительно');
+          console.log("Сомнительно");
         }
       });
   }
 
   finishView(score) {
-    console.log(
-      `Поздравляю! Путь был сложен, но ты справился!) ${score}`
-    );
+    console.log(`Поздравляю! Путь был сложен, но ты справился!) ${score}`);
   }
 }
 

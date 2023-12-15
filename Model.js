@@ -6,8 +6,9 @@ class Model {
     // массив с вопросами
     this.questions = [
       {
-        question: "Смотрел(а) ли ты 'Слово пацана'?",
-        answer: "Да",
+        question:
+          " Какие два слова каждый программист научился программировать в первую очередь?",
+        answer: "Привет, Мир!",
       },
       {
         question: "Снится ли тебе по ночам код?",
@@ -25,13 +26,24 @@ class Model {
         question: "Кто написал 'Войну и мир'?",
         answer: "Лев Толстой",
       },
+      {
+        question: "Если услышал фразу 'Щас прилетит хук', ты пригнешься?",
+        answer: "Да",
+      },
+      {
+        question: "Как программисты наслаждаются жизнью?",
+        answer: "Когда их код работает без ошибок",
+      },
+      {
+        question: "Самое высокое здание в Европе?",
+        answer: "Лахта",
+      },
     ];
   }
 
-  scoreModel(answer) {
-    if (answer) {
-      return (this.score += 1);
-    }
+  scoreModel() {
+    this.score += 1;
+    return this.score;
   }
 
   nextQuestionModel() {
