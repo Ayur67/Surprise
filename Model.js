@@ -1,5 +1,3 @@
-const fs = require("fs").promises;
-
 class Model {
   constructor(score = 0) {
     this.score = score;
@@ -8,12 +6,24 @@ class Model {
     // массив с вопросами
     this.questions = [
       {
-        question: "Кто написал 'Войну и мир'?",
-        answer: "Лев Толстой",
+        question: "Смотрел(а) ли ты 'Слово пацана'?",
+        answer: "Да",
       },
       {
-        question: "Какой химический элемент имеет символ 'O'?",
-        answer: "Кислород",
+        question: "Снится ли тебе по ночам код?",
+        answer: "Да",
+      },
+      {
+        question: "Как называется наша галактика?",
+        answer: "Млечный Путь",
+      },
+      {
+        question: "Видишь ли ты иногда в зеркале Райана Гослинга?",
+        answer: "Всегда",
+      },
+      {
+        question: "Кто написал 'Войну и мир'?",
+        answer: "Лев Толстой",
       },
     ];
   }
