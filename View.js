@@ -7,20 +7,24 @@ class View {
 
   questionsView(obj) {
     inquirer
-      .prompt([
-        {
-          type: 'rawlist',
-          name: 'bonuses',
-          message: `${obj[i].question}`,
-          choices: [
-            { name: `${obj[i].answers[i].answer1}`, value: `${obj.answers.value1}` },
-            { name: `${obj[i].answers[i].answer2}`, value: `${obj.answers.value2}` },
-            { name: `${obj[i].answers[i].answer3}`, value: `${obj.answers.value3}` },
-          ],
-        },
-      ])
-      .then((answers) => console.log(answers));
-  }
+    .prompt([
+      {
+        type: 'input',
+        name: 'bonuses',
+        message: `${obj.questions[i].question}`,
+        choices: [
+          { name: `${obj.questions[i].answer}`, value: 0 },
+        ],
+      },
+    ])
+    .then((answers) => {
+      const correctAnswer = `${obj.questions[i].answer}`;
+      if (answers.answer === correctAnswer) {
+        // Начислить баллы за правильный ответ
+      } else {
+        // Начислить баллы за неправильный ответ
+      }
+    })
 
   finishView(score) {
     console.log(
