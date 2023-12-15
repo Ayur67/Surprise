@@ -10,11 +10,11 @@ class View {
         {
           type: 'rawlist',
           name: 'bonuses',
-          message: `${obj.question}`,
+          message: `${obj[i].question}`,
           choices: [
-            { name: `${obj.answers.answer1}`, value: `${obj.answers.value1}` },
-            { name: `${obj.answers.answer2}`, value: `${obj.answers.value2}` },
-            { name: `${obj.answers.answer3}`, value: `${obj.answers.value3}` },
+            { name: `${obj[i].answers[i].answer1}`, value: `${obj.answers.value1}` },
+            { name: `${obj[i].answers[i].answer2}`, value: `${obj.answers.value2}` },
+            { name: `${obj[i].answers[i].answer3}`, value: `${obj.answers.value3}` },
           ],
         },
       ])
