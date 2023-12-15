@@ -16,7 +16,6 @@ class Model {
         answer: "Кислород",
       },
     ];
-    console.log(this.questions);
   }
 
   scoreModel(answer) {
