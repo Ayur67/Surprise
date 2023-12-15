@@ -1,2 +1,1 @@
-console.log("sur");
-console.log("фыв");
+console.log("наташа");
