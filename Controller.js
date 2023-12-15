@@ -7,19 +7,21 @@ class Controller {
     this.view = view;
   }
 
-  run() {
+  async run() {
+    // старт
     this.view.startView();
 
     // сейчас 0 при запуске
     while (this.model.currentQuestionIndex < this.model.questions.length) {
       // запускаем переход на следующий вопрос
-      const currentQuestion = this.model.NextQuestion();
+      const currentQuestion = this.model.nextQuestionModel();
       // получаем ответ и запускаем следующий вопрос
       const userAnswer = this.view.questionsView(currentQuestion.question);
+      await userAnswer;
     }
 
     const currenScore = this.model.scoreModel();
-    this.view.startView(currenScore);
+    this.view.finishView(currenScore);
   }
 }
 
