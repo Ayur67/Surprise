@@ -1,15 +1,16 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
 class View {
   startView() {
-    console.log('Добро пожаловать на викторину');
+    console.log("Добро пожаловать на викторину!!!");
   }
+
   questionsView(obj) {
     inquirer
       .prompt([
         {
-          type: 'rawlist',
-          name: 'bonuses',
+          type: "rawlist",
+          name: "bonuses",
           message: `${obj.question}`,
           choices: [
             { name: `${obj.answers.answer1}`, value: `${obj.answers.value1}` },
